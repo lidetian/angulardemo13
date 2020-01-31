@@ -1,6 +1,18 @@
-<p>product works!</p>
+<!-- <p>product works!</p>
 <br>
 <button (click)="goContent()">js 动态路由</button>
 
 <br>
-<button (click)="goGetContent()">js get方法传值</button>
+<button (click)="goGetContent()">js get方法传值</button> -->
+
+<div class="content">
+  <div class="left">
+      <a [routerLink]="['/product/pcate']" routerLinkActive="active" >Product Category</a>
+      <br>
+      <a [routerLink]="['/product/plist']" routerLinkActive="active" >Product List</a>
+  </div>
+  <div class="right">
+    <router-outlet></router-outlet>
+
+  </div>
+</div>
