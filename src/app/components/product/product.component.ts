@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router:Router) { }
 
   ngOnInit() {
   }
 
+  goContent(){
+    this.router.navigate(['/productcontent', 'aaa'])
+  }
+
+  goGetContent(){
+    let queryParams:NavigationExtras={
+      queryParams:{'pid':'bbb'}
+    }
+    this.router.navigate(['/productcontent'], queryParams);
+  }
 }

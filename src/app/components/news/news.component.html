@@ -1,1 +1,12 @@
 <p>news works!</p>
+<a [routerLink]="[ '/newscontent' ]" routerLinkActive="active">News Content</a>
+
+<ul *ngFor="let item of list; let i=index">
+  <li>
+    <!-- get 传值 -->
+    <!-- <a [routerLink]="[ '/newscontent']"[queryParams]="{aid:i}">{{i}}--{{item}}</a> -->
+
+    <a [routerLink]="[ '/newscontent', i ]">{{i}}--{{item}}</a>
+
+  </li>
+</ul>
